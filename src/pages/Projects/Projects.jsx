@@ -3,7 +3,7 @@ import "./Projects.css";
 import project1 from "../../assets/img/resort_vally_project.png"
 import project2 from "../../assets/img/movie_app.jpg"
 import project3 from "../../assets/img/node_taking_app.png"
-// import Spin from "react-reveal/Spin";
+import Jello from 'react-reveal/Jello';
 const Projects = () => {
   return (
     <>
@@ -17,7 +17,7 @@ const Projects = () => {
         </p>
         {/* card design */}
         <div className="row" id="ads">
-          {/* <Spin> */}
+          <Jello>
             <div className="col-md-4">
               <div className="card rounded">
                 <div className="card-image">
@@ -100,7 +100,7 @@ const Projects = () => {
                 </div>
               </div>
             </div>
-          {/* </Spin> */}
+          </Jello>
         </div>
       </div>
     </>

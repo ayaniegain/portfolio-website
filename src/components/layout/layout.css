@@ -21,10 +21,20 @@
     background-color: white;
     margin-top: 30px;
 }
+#dark .sidebar-toggle-icons p svg{
+    background-color: white;
+    margin-top: 30px;
+    color: black;
+}
 .sidebar-toggle-icons p :hover{
     background-color: #f29f67;
     margin-top: 30px;
     color: white;
+}
+#dark .sidebar-toggle-icons p :hover{
+    background-color: #f29f67;
+    margin-top: 30px;
+    color: black;
 }
 
 /* ==== MOBILE VIEW ========== */

@@ -46,7 +46,7 @@ const Contact = () => {
                 <div className="row border-line">
                   {/* <LightSpeed> */}
                     <img
-                      src="https://img.freepik.com/free-photo/hot-line-contact-us-call-center-search-interface_53876-124009.jpg?w=2000"
+                      src="https://img.freepik.com/free-vector/flat-design-illustration-customer-support_23-2148887720.jpg?w=740&t=st=1691082964~exp=1691083564~hmac=deafa8a7e57a39f0729ea196ef5676f680e5d32ebb7af0184bdf19a8bd898ec2"
                       alt="contact"
                       className="image"
                     />
@@ -59,7 +59,7 @@ const Contact = () => {
                 <div className="card2 d-flex card border-0 px-4 py-5">
                   <div className="row">
                     <div className="row">
-                      <h6>
+                      <h6  style={{display:"flex" ,gap:"28px"}}>
                         Contact With
                         <BsLinkedin color="blue" size={30} className="ms-2" />
                         <BsGithub color="black" size={30} className="ms-2" />
@@ -103,7 +103,7 @@ const Contact = () => {
                       />
                     </div>
                     <div className="row px-3">
-                      <button className="button" onClick=''>
+                      <button className="button">
                         SEND MESSAGE
                       </button>
                     </div>
