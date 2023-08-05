@@ -49,6 +49,7 @@ function Home() {
               <a className="btn btn-cv" href={Resume} download="Ayan_Biswas_Developer.pdf">
                 My Resume
               </a>
+            <p className="mydetails">Email: ayaniegain@gmail.com</p>
             </div>
         </Fade>
 

@@ -1,5 +1,4 @@
 import "./App.css";
-import { useState } from "react";
 import Layout from "./components/layout/Layout";
 import AnimatedCursor from "react-animated-cursor";
 import About from "./pages/About/About";
@@ -10,6 +9,7 @@ import WorkExp from "./pages/workExp/WorkExp";
 import Contact from "./pages/Contact/Contact";
 import ScrollToTop from "react-scroll-to-top";
 import { useTheme } from "./context/ThemeContext.jsx";
+import MobileNav from "./components/MobileNav/MobileNav";
 
 function App() {
   const [theme] = useTheme();
@@ -25,6 +25,7 @@ function App() {
           outerScale={5}
         />
       </div>
+      <MobileNav/>
       <Layout />
       <div className="container">
         <About />
