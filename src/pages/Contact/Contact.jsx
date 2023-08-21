@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-// import 'react-toastify/dist/ReactToastify.css';
 import { toast } from "react-toastify";
-import axios from "axios";
+// import axios from "axios";
 import "./Contact.css";
 import LightSpeed from "react-reveal/LightSpeed";
 import {  BsGithub, BsLinkedin } from "react-icons/bs";
@@ -22,24 +21,30 @@ const Contact = () => {
       if (!name || !email || !msg) {
         toast.error("PLease Provide all fields");
         alert("PLease Provide all fields")
-      }
-      const res = await axios.post("/api/v1/portfolio/sendEmail", {
-        name,
-        email,
-        msg,
-      });
-      //validation success
-      if (res.data.success) {
-        toast.success(res.data.message);
+      }else{
         alert("Your Message Send Successfully")
         setname("");
         setEmail("");
         setMsg("");
-      } else {
-        toast.error(res.data.message);
       }
+      
+      // const res = await axios.post("/api/v1/portfolio/sendEmail", {
+      //   name,
+      //   email,
+      //   msg,
+      // });
+      // //validation success
+      // if (res.data.success) {
+      //   toast.success(res.data.message);
+      //   alert("Your Message Send Successfully")
+      //   setname("");
+      //   setEmail("");
+      //   setMsg("");
+      // } else {
+      //   toast.error(res.data.message);
+      // }
     } catch (error) {
-      console.log(error);
+      console.log("error",error);
     }
   };
 
@@ -65,11 +70,11 @@ const Contact = () => {
                 <div className="card2 d-flex card border-0 px-4 py-5">
                   <div className="row">
                     <div className="row">
-                      <h6  style={{display:"flex" ,gap:"28px"}}>
+                      <h6>
                         Contact With
                         <a href="https://www.linkedin.com/in/ayangx/"><BsLinkedin color="blue" size={30} className="ms-2" /></a>
                         <a href="https://github.com/ayaniegain"><BsGithub color="blue" size={30} className="ms-2" /></a>
-                        <a href = "mailto: ayaniegain@gmail.com"><MdEmail color="blue" size={30} className="ms-2" /></a>
+                        <a href = "mailto: ayaniegain@gmail.com"><MdEmail color="blue" size={35} className="ms-2" /></a>
                       </h6>
                     </div>
 
@@ -80,6 +85,7 @@ const Contact = () => {
                     </div>
                     <div className="row px-3">
                       <input
+                      required
                         type="text"
                         name="name"
                         placeholder="Enter your Name"
@@ -90,6 +96,7 @@ const Contact = () => {
                     </div>
                     <div className="row px-3">
                       <input
+                      required
                         type="email"
                         name="email"
                         placeholder="Enter Your Email Address"
@@ -100,6 +107,7 @@ const Contact = () => {
                     </div>
                     <div className="row px-3">
                       <textarea
+                      required
                         type="text"
                         name="msg"
                         placeholder="Write your message"
